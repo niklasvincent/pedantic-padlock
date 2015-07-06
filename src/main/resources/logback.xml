@@ -1,0 +1,19 @@
+<configuration>
+
+    <contextName>pedantic-padlock</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}:%line - %msg%n%xException{full}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="spray.can.client" level="DEBUG" />
+
+    <logger name="info.lindblad.pedanticpadlock" level="DEBUG" />
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
