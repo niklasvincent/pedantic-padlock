@@ -1,25 +1,42 @@
 package info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.asset
 
-object StatusBadgeService {
+import info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.services.{QualysService, ConnectionTesterService}
+import info.lindblad.pedanticpadlock.util.Logging
 
-  lazy val colors = Map(
-    "green" -> ColorCombination("#5ACA24", "#4EBC13"),
-    "amber" -> ColorCombination("#FEC113", "#E2AB00"),
-    "red" -> ColorCombination("#FF3328", "#DC1813")
-  )
+object StatusBadgeService extends Logging {
 
   // Possible values: A+, A-, A-F, T (no trust) and M (certificate name mismatch)
   lazy val badges = Map(
-    "A" -> new StatusBadge("A", colors.get("green")),
-    "A-" -> new StatusBadge("A-", colors.get("green")),
-    "A+" -> new StatusBadge("A+", colors.get("green")),
-    "B" -> new StatusBadge("B", colors.get("amber")),
-    "C" -> new StatusBadge("C", colors.get("amber")),
-    "D" -> new StatusBadge("C", colors.get("amber")),
-    "E" -> new StatusBadge("E", colors.get("amber")),
-    "F" -> new StatusBadge("F", colors.get("red")),
-    "T" -> new StatusBadge("T", colors.get("red")),
-    "M" -> new StatusBadge("M", colors.get("red"))
+    "A" -> new StatusBadge("A", Colors.green),
+    "A-" -> new StatusBadge("A-", Colors.green),
+    "A+" -> new StatusBadge("A+", Colors.green),
+    "B" -> new StatusBadge("B", Colors.amber),
+    "C" -> new StatusBadge("C", Colors.amber),
+    "D" -> new StatusBadge("C", Colors.amber),
+    "E" -> new StatusBadge("E", Colors.amber),
+    "F" -> new StatusBadge("F", Colors.red),
+    "T" -> new StatusBadge("T", Colors.red),
+    "M" -> new StatusBadge("M", Colors.red)
   )
+
+  def generateBadge(hostname: String): Option[StatusBadge] = {
+    logger.debug("Started analysing {}", hostname)
+    // 1. Test initial connection
+    val daysUntilExpiration = ConnectionTesterService.daysUntilExpiration(hostname)
+    logger.debug("daysUntilExpiraton = {}", daysUntilExpiration)
+    if (daysUntilExpiration == -1) {
+      return Some(new StatusBadge("F", Colors.red))
+    } else if (daysUntilExpiration <= 14) {
+      return Some(new StatusBadge(daysUntilExpiration.toString, Colors.red))
+    }
+
+    // 2. Use Qualys API
+    QualysService().gradeIfReady(hostname) match {
+      case Some(grade) => Some(badges.get(grade).getOrElse(new StatusBadge("X", Colors.red)))
+      case _ => None
+    }
+  }
+
+  lazy val default = new StatusBadge("↺", Colors.grey)
 
 }

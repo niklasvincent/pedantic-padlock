@@ -1,9 +1,9 @@
 package info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.asset
 
-class StatusBadge(text: String, colorCombination: Option[ColorCombination]) {
+class StatusBadge(text: String, colorCombination: ColorCombination) {
 
   val template = """<?xml version="1.0"?>
-                      |<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="480">
+                      |<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210" height="210">
                       |    <desc iVinci="yes" version="4.6" gridStep="20" showGrid="no" snapToGrid="no" codePlatform="0"/>
                       |    <g id="Layer1" name="Layer 1" opacity="1">
                       |        <g id="Shape1">
@@ -22,12 +22,8 @@ class StatusBadge(text: String, colorCombination: Option[ColorCombination]) {
 
 
   override def toString: String = {
-    val colors = colorCombination match {
-      case Some(combination) => combination
-      case _ => new ColorCombination("#000000", "#000000")
-    }
     val fontSize = if (text.length == 1) "160" else "140"
-    template.format(colors.borderColor, colors.backgroundColor, text, fontSize)
+    template.format(colorCombination.borderColor, colorCombination.backgroundColor, text, fontSize)
   }
 
 }
@@ -35,6 +31,11 @@ class StatusBadge(text: String, colorCombination: Option[ColorCombination]) {
 case class ColorCombination(backgroundColor: String, borderColor: String) {
 }
 
-case class Grade(level: String, colorCombination: ColorCombination) {
+object Colors {
+
+  val green  = ColorCombination("#5ACA24", "#4EBC13")
+  val amber = ColorCombination("#FEC113", "#E2AB00")
+  val red = ColorCombination("#FF3328", "#DC1813")
+  val grey = ColorCombination("#EEEEEE", "#444444")
 
 }
