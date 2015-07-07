@@ -66,7 +66,12 @@
         .about {
             top: 15px;
             margin-left: 10px;
-            position: absolute;s
+            position: absolute;
+        }
+        .share {
+            top: 15px;
+            right: 30px;
+            position: absolute;
         }
         .badge-remove-button {
             float: right;
@@ -278,7 +283,30 @@
                 window.addToolBadge();
             }
 
+            window.importBadgesFromUrl = function importBadgesFromUrl() {
+                if (window.location.hash.length > 2) {
+                    var domainsToImport = window.location.hash.substr(1).split(',');
+                    for (var i = 0; i < domainsToImport.length; i++) {
+                        addDomain(domainsToImport[i]);
+                    }
+                    window.location = location.protocol + '//' + location.host + location.pathname;
+                }
+            }
+
+            window.constructShareUrl = function constructShareUrl() {
+               var domains = window.getDomains();
+               var shareUrl = location.protocol + '//' + location.host + location.pathname + '#' + domains.join();
+               shareUrl = shareUrl.substring(0, shareUrl.length - 1);
+               return shareUrl;
+            }
+
+            window.presentShareUrl = function presentShareUrl() {
+                console.log("hello");
+                window.prompt("Copy to clipboard: Ctrl+C, Enter", window.constructShareUrl());
+            }
+
             if(typeof(Storage) !== "undefined") {
+                window.importBadgesFromUrl();
                 window.renderBadges();
             } else {
                 document.getElementById('badges').innerHTML = '<h1 class="error">Your browser does not support local storage :(</h1>';
@@ -295,6 +323,7 @@
     <div id="about">
         <a class="github-button" href="https://github.com/nlindblad/pedantic-padlock/fork" data-icon="octicon-git-branch" data-style="mega" data-count-href="/nlindblad/pedantic-padlock/network" data-count-api="/repos/nlindblad/pedantic-padlock#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork nlindblad/pedantic-padlock on GitHub">Fork</a>
         <span class="about author">Pedantic Padlock by <a target="_blank" href="https://twitter.com/nlindblad">@nlindblad</a></span>
+        <span class="share"><a href="javascript:window.presentShareUrl();">Share this dashboard</a></span>
     </div>
 
     <div id="badges" class="grid"></div>
