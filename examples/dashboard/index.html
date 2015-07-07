@@ -296,7 +296,6 @@
             window.constructShareUrl = function constructShareUrl() {
                var domains = window.getDomains();
                var shareUrl = location.protocol + '//' + location.host + location.pathname + '#' + domains.join();
-               shareUrl = shareUrl.substring(0, shareUrl.length - 1);
                return shareUrl;
             }
 
