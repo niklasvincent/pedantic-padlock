@@ -44,10 +44,11 @@
         }
         .badge {
             text-align: center;
+            z-index: 110;
         }
-        .label {
+        .badge-label {
             display: block;
-            font-size: 1.4em;
+            font-size: 1.2em;
             margin-left: -15px;
         }
         .add-new-badge {
@@ -66,6 +67,25 @@
             top: 15px;
             margin-left: 10px;
             position: absolute;s
+        }
+        .badge-remove-button {
+            float: right;
+            position: relative;
+            left: -60px;
+            top: -250px;
+            height: 49px;
+            z-index: 100;
+            font-size: 4em;
+        }
+        .badge-remove-button a {
+            text-decoration: none;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            color: #EFEFEF;
+        }
+        .badge-remove-button a:hover {
+            opacity: 1.0 !important;
+            filter: alpha(opacity=100) !important;
         }
 
         /*
@@ -188,60 +208,78 @@
 
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function(event) {
-            var pedanticPadlockUrl = "https://pedantic-padlock.herokuapp.com/status/badge?domain=";
-            var localStorageKey = "pedantic-padlock-domains";
+            window.pedanticPadlockUrl = "https://pedantic-padlock.herokuapp.com/status/badge?domain=";
+            window.localStorageKey = "pedantic-padlock-domains";
 
-            function getDomains() {
-                var domains = localStorage.getItem(localStorageKey);
+            window.getDomains = function getDomains() {
+                var domains = localStorage.getItem(window.localStorageKey);
                 if (!domains) {
                     return [];
                 }
                 return domains.split(',');
             }
 
-            function addDomain(domain) {
+            window.addDomain = function addDomain(domain) {
                 var domains = getDomains();
                 if (domains.indexOf(domain) == -1) {
                     domains.push(domain);
-                    localStorage.setItem(localStorageKey, domains);
+                    localStorage.setItem(window.localStorageKey, domains);
                 }
             }
 
-            function clearBadges() {
+            window.removeDomain = function removeDomain(domain) {
+                console.log("asked to remove domain: " + domain);
+                var domains = window.getDomains();
+                var newDomains = [];
+                if (domains.indexOf(domain) > -1) {
+                    for (i = 0; i < domains.length; i++) {
+                        if (domains[i] !== domain) {
+                            newDomains.push(domains[i]);
+                        }
+                    }
+                    console.log(newDomains);
+                    localStorage.setItem(window.localStorageKey, newDomains);
+                }
+            }
+
+            window.clearBadges = function clearBadges() {
                 document.getElementById('badges').innerHTML = '';
             }
 
-            function addBadge(domain) {
+            window.addBadge = function addBadge(domain) {
+                var badgeRemoveButton = '<span class="badge-remove-button"><a href="javascript:window.removeDomain(\'' + domain + '\');window.renderBadges();">x</a></span>';
                 var badgeImg = '<img src="' + pedanticPadlockUrl + domain + '" />';
-                var badgeLabel = '<span class="label">' + domain + '</span>';
-                var badgeHtml = '<div class="unit one-quarter badge">' + badgeImg + badgeLabel +  '</div>';
+                var badgeLabel = '<span class="badge-label">' + domain + '</span>';
+                var badgeHtml = '<div class="unit one-quarter badge">' + badgeImg + badgeLabel +  badgeRemoveButton + '</div>';
                 document.getElementById('badges').innerHTML = document.getElementById('badges').innerHTML + badgeHtml;
             }
 
-            function addToolBadge() {
-                var badgeHtml = '<div class="unit one-quarter add-new-badge"><span id="addNewButton">+</span></div>';
-                document.getElementById('badges').innerHTML = document.getElementById('badges').innerHTML + badgeHtml;
+            window.promptUserForNewBadge = function promptUserForNewBadge() {
+                var newDomain = window.prompt("Domain to monitor:");
+                if (newDomain != null) {
+                    window.addDomain(newDomain);
+                    window.renderBadges();
+                }
             }
 
-            function renderBadges() {
-                clearBadges();
-                var domains = getDomains();
+            window.addToolBadge = function addToolBadge() {
+                var toolBadgeHtml = '<div class="unit one-quarter add-new-badge"><span id="addNewButton">+</span></div>';
+                document.getElementById('badges').innerHTML = document.getElementById('badges').innerHTML + toolBadgeHtml;
+                document.getElementById("addNewButton").onclick = window.promptUserForNewBadge;
+            }
+
+            window.renderBadges = function renderBadges() {
+                window.clearBadges();
+                var domains = window.getDomains();
                 for (i = 0; i < domains.length; i++) {
                     var domain = domains[i];
-                    addBadge(domain);
+                    window.addBadge(domain);
                 }
-                addToolBadge();
+                window.addToolBadge();
             }
 
             if(typeof(Storage) !== "undefined") {
-                renderBadges();
-                document.getElementById("addNewButton").onclick = function() {
-                    var newDomain = window.prompt("Domain");
-                    if (newDomain != null) {
-                        addDomain(newDomain);
-                        renderBadges();
-                    }
-                };
+                window.renderBadges();
             } else {
                 document.getElementById('badges').innerHTML = '<h1 class="error">Your browser does not support local storage :(</h1>';
             }
