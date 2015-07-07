@@ -1,0 +1,263 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+
+      <title>The Pedantic Padlock Dashboard</title>
+      <meta name="description" content="The Pedantic Padlock Dashboard">
+      <meta name="author" content="Niklas Lindblad">
+
+    <style type="text/css">
+        body { 
+            font-family: Helvetica, Arial, sans-serif;
+            background: #eeede9;
+        }
+        td { 
+            padding: 20px;
+        }
+        form {
+            display: inline-block;
+            text-align: center;
+        }
+        label, input, button {
+            font-size: 1.4em;
+        }
+        .error {
+            background: red;
+            width: 60%;
+            text-align: center;
+            margin-left: 20%;
+            margin-top: 10%;
+        }
+        #toolbar {
+            background: #FFFFCC;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            margin: 0;
+            z-index: -10;
+        }
+        #badges {
+            margin-top: 2%;
+        }
+        .badge {
+            text-align: center;
+        }
+        .label {
+            display: block;
+            font-size: 1.4em;
+            margin-left: -15px;
+        }
+        .add-new-badge {
+            text-align: center;
+            font-size: 10em;
+            border-radius: 25px;
+            padding: 20px;
+            height: 100px;
+            padding-bottom: 50px;
+            color: #D6D6D6;
+        }
+        .add-new-badge:hover {
+            color: #828282;
+        }
+        .about {
+            top: 15px;
+            margin-left: 10px;
+            position: absolute;s
+        }
+
+        /*
+         * Gridism
+         * A simple, responsive, and handy CSS grid by @cobyism
+         * https://github.com/cobyism/gridism
+         */
+
+        /* Preserve some sanity */
+        .grid,
+        .unit {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+
+        /* Set up some rules to govern the grid */
+        .grid {
+          display: block;
+          clear: both;
+        }
+        .grid .unit {
+          float: left;
+          width: 100%;
+          padding: 10px;
+        }
+
+        /* This ensures the outer gutters are equal to the (doubled) inner gutters. */
+        .grid .unit:first-child { padding-left: 20px; }
+        .grid .unit:last-child { padding-right: 20px; }
+
+        /* Nested grids already have padding though, so let’s nuke it */
+        .unit .unit:first-child { padding-left: 0; }
+        .unit .unit:last-child { padding-right: 0; }
+        .unit .grid:first-child > .unit { padding-top: 0; }
+        .unit .grid:last-child > .unit { padding-bottom: 0; }
+
+        /* Let people nuke the gutters/padding completely in a couple of ways */
+        .no-gutters .unit,
+        .unit.no-gutters {
+          padding: 0 !important;
+        }
+
+        /* Wrapping at a maximum width is optional */
+        .wrap .grid,
+        .grid.wrap {
+          max-width: 978px;
+          margin: 0 auto;
+        }
+
+        /* Width classes also have shorthand versions numbered as fractions
+         * For example: for a grid unit 1/3 (one third) of the parent width,
+         * simply apply class="w-1-3" to the element. */
+        .grid .whole,          .grid .w-1-1 { width: 100%; }
+        .grid .half,           .grid .w-1-2 { width: 50%; }
+        .grid .one-third,      .grid .w-1-3 { width: 33.3332%; }
+        .grid .two-thirds,     .grid .w-2-3 { width: 66.6665%; }
+        .grid .one-quarter,    .grid .w-1-4 { width: 25%; }
+        .grid .three-quarters, .grid .w-3-4 { width: 75%; }
+        .grid .one-fifth,      .grid .w-1-5 { width: 20%; }
+        .grid .two-fifths,     .grid .w-2-5 { width: 40%; }
+        .grid .three-fifths,   .grid .w-3-5 { width: 60%; }
+        .grid .four-fifths,    .grid .w-4-5 { width: 80%; }
+        .grid .golden-small,   .grid .w-g-s { width: 38.2716%; } /* Golden section: smaller piece */
+        .grid .golden-large,   .grid .w-g-l { width: 61.7283%; } /* Golden section: larger piece */
+
+        /* Clearfix after every .grid */
+        .grid {
+          *zoom: 1;
+        }
+        .grid:before, .grid:after {
+          display: table;
+          content: "";
+          line-height: 0;
+        }
+        .grid:after {
+          clear: both;
+        }
+
+        /* Utility classes */
+        .align-center { text-align: center; }
+        .align-left   { text-align: left; }
+        .align-right  { text-align: right; }
+        .pull-left    { float: left; }
+        .pull-right   { float: right; }
+
+        /* Responsive Stuff */
+        @media screen and (max-width: 568px) {
+          /* Stack anything that isn’t full-width on smaller screens */
+          .grid .unit {
+            width: 100% !important;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          .unit .grid .unit {
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+
+          /* Sometimes, you just want to be different on small screens */
+          .center-on-mobiles {
+            text-align: center !important;
+          }
+          .hide-on-mobiles {
+            display: none !important;
+          }
+        }
+
+        /* Expand the wrap a bit further on larger screens */
+        @media screen and (min-width: 1180px) {
+          .wider .grid {
+            max-width: 1180px;
+            margin: 0 auto;
+          }
+        }
+    </style>
+
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var pedanticPadlockUrl = "https://pedantic-padlock.herokuapp.com/status/badge?domain=";
+            var localStorageKey = "pedantic-padlock-domains";
+
+            function getDomains() {
+                var domains = localStorage.getItem(localStorageKey);
+                if (!domains) {
+                    return [];
+                }
+                return domains.split(',');
+            }
+
+            function addDomain(domain) {
+                var domains = getDomains();
+                if (domains.indexOf(domain) == -1) {
+                    domains.push(domain);
+                    localStorage.setItem(localStorageKey, domains);
+                }
+            }
+
+            function clearBadges() {
+                document.getElementById('badges').innerHTML = '';
+            }
+
+            function addBadge(domain) {
+                var badgeImg = '<img src="' + pedanticPadlockUrl + domain + '" />';
+                var badgeLabel = '<span class="label">' + domain + '</span>';
+                var badgeHtml = '<div class="unit one-quarter badge">' + badgeImg + badgeLabel +  '</div>';
+                document.getElementById('badges').innerHTML = document.getElementById('badges').innerHTML + badgeHtml;
+            }
+
+            function addToolBadge() {
+                var badgeHtml = '<div class="unit one-quarter add-new-badge"><span id="addNewButton">+</span></div>';
+                document.getElementById('badges').innerHTML = document.getElementById('badges').innerHTML + badgeHtml;
+            }
+
+            function renderBadges() {
+                clearBadges();
+                var domains = getDomains();
+                for (i = 0; i < domains.length; i++) {
+                    var domain = domains[i];
+                    addBadge(domain);
+                }
+                addToolBadge();
+            }
+
+            if(typeof(Storage) !== "undefined") {
+                renderBadges();
+                document.getElementById("addNewButton").onclick = function() {
+                    var newDomain = window.prompt("Domain");
+                    if (newDomain != null) {
+                        addDomain(newDomain);
+                        renderBadges();
+                    }
+                };
+            } else {
+                document.getElementById('badges').innerHTML = '<h1 class="error">Your browser does not support local storage :(</h1>';
+            }
+        });
+    </script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+    <div id="about">
+        <a class="github-button" href="https://github.com/nlindblad/pedantic-padlock/fork" data-icon="octicon-git-branch" data-style="mega" data-count-href="/nlindblad/pedantic-padlock/network" data-count-api="/repos/nlindblad/pedantic-padlock#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork nlindblad/pedantic-padlock on GitHub">Fork</a>
+        <span class="about author">Pedantic Padlock by <a target="_blank" href="https://twitter.com/nlindblad">@nlindblad</a></span>
+    </div>
+
+    <div id="badges" class="grid"></div>
+</body>
