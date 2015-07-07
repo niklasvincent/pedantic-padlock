@@ -27,3 +27,10 @@ Deploy using SBT:
 Make sure the application started correctly:
 
 	heroku logs --app pacific-meadow-xxxx
+
+## Future Work
+
+- [ ] Improve SSL Labs background processing
+- [ ] Tune actor systems
+- [ ] Deploy to Heroku button (if possible)
+- [ ] Add dashboard as root page
