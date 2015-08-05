@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nlindblad/pedantic-padlock.svg)](https://travis-ci.org/nlindblad/pedantic-padlock)
+
 # Pedantic Padlock
 
 SSL status badges powered by Qualys SSL Labs
