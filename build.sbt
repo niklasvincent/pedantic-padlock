@@ -8,15 +8,13 @@ scalaVersion := "2.11.7"
 
 resolvers += "spray repo" at "http://repo.spray.io"
 
-herokuAppName in Compile := "pacific-meadow-xxxx"
+herokuAppName in Compile := "pedantic-padlock"
 
 libraryDependencies ++= {
-  val identityV = "3.44"
   val akkaV = "2.3.9"
   val sprayV = "1.3.3"
   val sprayJsonV = "1.3.1"
   Seq(
-    "com.gu.identity"     %%  "identity-crypto" % identityV,
     "io.spray"            %%  "spray-can"     % sprayV,
     "io.spray"            %%  "spray-routing" % sprayV,
     "io.spray"            %%  "spray-client"  % sprayV,
@@ -25,7 +23,7 @@ libraryDependencies ++= {
     "com.typesafe.akka"   %%  "akka-actor"    % akkaV,
     "com.typesafe.akka"   %%  "akka-slf4j"    % akkaV,
     "ch.qos.logback"      %   "logback-classic" % "1.1.2",
-    "net.liftweb"         %% "lift-json"      % "2.5.1"
+    "net.liftweb"         %%  "lift-json"      % "2.5.1"
   )
 }
 
