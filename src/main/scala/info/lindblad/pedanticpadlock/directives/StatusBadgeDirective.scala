@@ -1,6 +1,6 @@
 package info.lindblad.pedanticpadlock.directives
 
-import info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.asset.{StatusBadgeService, StatusBadge}
+import info.lindblad.pedanticpadlock.asset.{StatusBadgeService, StatusBadge}
 import spray.http.CacheDirectives.`max-age`
 import spray.http.HttpHeaders.{RawHeader, `Cache-Control`}
 import spray.http.MediaTypes._

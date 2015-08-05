@@ -1,4 +1,4 @@
-package info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.asset
+package info.lindblad.pedanticpadlock.asset
 
 class StatusBadge(text: String, colorCombination: ColorCombination) {
 

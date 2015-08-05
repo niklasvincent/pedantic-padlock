@@ -1,6 +1,6 @@
-package info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.asset
+package info.lindblad.pedanticpadlock.asset
 
-import info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.services.{QualysService, ConnectionTesterService}
+import info.lindblad.pedanticpadlock.{QualysService, ConnectionTesterService}
 import info.lindblad.pedanticpadlock.util.Logging
 
 object StatusBadgeService extends Logging {

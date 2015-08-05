@@ -1,15 +1,14 @@
-package info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.services
+package info.lindblad.pedanticpadlock
 
+import _root_.info.lindblad.pedanticpadlock.util.Logging
 import akka.actor.ActorSystem
 import akka.util.Timeout
-import info.lindblad.pedanticpadlock.util.Logging
+import net.liftweb.json._
+import spray.client.pipelining._
+import spray.http._
+
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
-import spray.http._
-import spray.client.pipelining._
-
-import net.liftweb.json._
-
 import scala.util.Success
 
 class QualysService(apiBaseUrl: String = "https://api.ssllabs.com/api/", apiVersion: String = "2") extends Logging {

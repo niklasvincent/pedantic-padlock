@@ -1,4 +1,4 @@
-package info.lindblad.pedanticpadlock.info.lindblad.pedanticpadlock.services;
+package info.lindblad.pedanticpadlock;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;

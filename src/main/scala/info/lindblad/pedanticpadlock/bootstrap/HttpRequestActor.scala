@@ -1,6 +1,6 @@
 package info.lindblad.pedanticpadlock.bootstrap
 
-import info.lindblad.pedanticpadlock.directives.{StatusBadgeDirective, HealthCheckDirective}
+import info.lindblad.pedanticpadlock.directives.{DashboardDirective, StatusBadgeDirective, HealthCheckDirective}
 import info.lindblad.pedanticpadlock.util.Logging
 import spray.http.StatusCodes._
 import spray.http._
