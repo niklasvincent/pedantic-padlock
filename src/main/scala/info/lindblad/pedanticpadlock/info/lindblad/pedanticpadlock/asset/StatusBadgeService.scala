@@ -26,7 +26,7 @@ object StatusBadgeService extends Logging {
     logger.debug("daysUntilExpiraton = {}", daysUntilExpiration)
     if (daysUntilExpiration == -1) {
       return Some(new StatusBadge("F", Colors.red))
-    } else if (daysUntilExpiration <= 14) {
+    } else if (daysUntilExpiration <= 30) {
       return Some(new StatusBadge(daysUntilExpiration.toString, Colors.red))
     }
 
