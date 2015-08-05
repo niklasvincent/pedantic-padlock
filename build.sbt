@@ -23,7 +23,7 @@ libraryDependencies ++= {
     "com.typesafe.akka"   %%  "akka-actor"    % akkaV,
     "com.typesafe.akka"   %%  "akka-slf4j"    % akkaV,
     "ch.qos.logback"      %   "logback-classic" % "1.1.2",
-    "net.liftweb"         %%  "lift-json"      % "2.5.1"
+    "net.liftweb"         % "lift-json_2.10"  % "2.5.1"
   )
 }
 
