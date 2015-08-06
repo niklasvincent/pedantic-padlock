@@ -1,0 +1,30 @@
+{
+  "status": "IN_PROGRESS",
+  "protocol": "HTTP",
+  "port": 443,
+  "engineVersion": "1.18.1",
+  "host": "pacific-meadow-8374.herokuapp.com",
+  "isPublic": false,
+  "endpoints": [
+    {
+      "statusDetails": "TESTING_LONG_HANDSHAKE",
+      "delegation": 1,
+      "statusDetailsMessage": "Testing Long Handshake (might take a while)",
+      "serverName": "ec2-54-197-235-183.compute-1.amazonaws.com",
+      "ipAddress": "54.197.235.183",
+      "eta": -1,
+      "statusMessage": "In progress",
+      "progress": -1
+    },
+    {
+      "ipAddress": "54.225.69.146",
+      "progress": -1,
+      "eta": -1,
+      "serverName": "ec2-54-225-69-146.compute-1.amazonaws.com",
+      "delegation": 2,
+      "statusMessage": "Pending"
+    }
+  ],
+  "startTime": 1436196501346,
+  "criteriaVersion": "2009j"
+}

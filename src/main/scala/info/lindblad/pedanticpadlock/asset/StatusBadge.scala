@@ -1,5 +1,7 @@
 package info.lindblad.pedanticpadlock.asset
 
+import info.lindblad.pedanticpadlock.bootstrap.Configuration
+
 class StatusBadge(text: String, colorCombination: ColorCombination) {
 
   val template = """<?xml version="1.0"?>
@@ -33,9 +35,21 @@ case class ColorCombination(backgroundColor: String, borderColor: String) {
 
 object Colors {
 
-  val green  = ColorCombination("#5ACA24", "#4EBC13")
-  val amber = ColorCombination("#FEC113", "#E2AB00")
-  val red = ColorCombination("#FF3328", "#DC1813")
-  val grey = ColorCombination("#EEEEEE", "#444444")
+  val green  = ColorCombination(
+    Configuration.values.getString("badge.colors.green.background"),
+    Configuration.values.getString("badge.colors.green.border")
+  )
+  val amber = ColorCombination(
+    Configuration.values.getString("badge.colors.amber.background"),
+    Configuration.values.getString("badge.colors.amber.border")
+  )
+  val red = ColorCombination(
+    Configuration.values.getString("badge.colors.red.background"),
+    Configuration.values.getString("badge.colors.red.border")
+  )
+  val grey = ColorCombination(
+    Configuration.values.getString("badge.colors.grey.background"),
+    Configuration.values.getString("badge.colors.grey.border")
+  )
 
 }
