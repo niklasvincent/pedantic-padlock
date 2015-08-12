@@ -1,0 +1,1996 @@
+
+{
+  "status": "READY",
+  "protocol": "HTTP",
+  "port": 443,
+  "engineVersion": "1.18.1",
+  "testTime": 1436192329927,
+  "host": "profile.theguardian.com",
+  "isPublic": false,
+  "endpoints": [
+    {
+      "hasWarnings": false,
+      "eta": 35,
+      "serverName": "ec2-79-125-12-194.eu-west-1.compute.amazonaws.com",
+      "ipAddress": "79.125.12.194",
+      "details": {
+        "key": {
+          "size": 2048,
+          "strength": 2048,
+          "alg": "RSA",
+          "debianFlaw": false
+        },
+        "renegSupport": 6,
+        "sims": {
+          "results": [
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 56,
+                "name": "Android",
+                "version": "2.3.7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 58,
+                "name": "Android",
+                "version": "4.0.4"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 59,
+                "name": "Android",
+                "version": "4.1.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 60,
+                "name": "Android",
+                "version": "4.2.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 61,
+                "name": "Android",
+                "version": "4.3"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 62,
+                "name": "Android",
+                "version": "4.4.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 88,
+                "name": "Android",
+                "version": "5.0.0"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 94,
+                "name": "Baidu",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 91,
+                "name": "BingPreview",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "42",
+                "id": 105,
+                "isReference": true,
+                "name": "Chrome",
+                "platform": "OS X"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "31.3.0 ESR",
+                "id": 84,
+                "isReference": false,
+                "name": "Firefox",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "37",
+                "id": 103,
+                "isReference": true,
+                "name": "Firefox",
+                "platform": "OS X"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 97,
+                "name": "Googlebot",
+                "version": "Feb 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "attempts": 1,
+              "client": {
+                "version": "6",
+                "id": 100,
+                "isReference": false,
+                "name": "IE",
+                "platform": "XP"
+              },
+              "errorCode": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "7",
+                "id": 19,
+                "isReference": false,
+                "name": "IE",
+                "platform": "Vista"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 10,
+              "client": {
+                "version": "8",
+                "id": 101,
+                "isReference": false,
+                "name": "IE",
+                "platform": "XP"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "8-10",
+                "id": 23,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 102,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 104,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 8.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "10",
+                "id": 64,
+                "isReference": false,
+                "name": "IE Mobile",
+                "platform": "Win Phone 8.0"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 106,
+                "isReference": false,
+                "name": "IE Mobile",
+                "platform": "Win Phone 8.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 25,
+                "name": "Java",
+                "version": "6u45"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 26,
+                "name": "Java",
+                "version": "7u25"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 86,
+                "name": "Java",
+                "version": "8u31"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 27,
+                "name": "OpenSSL",
+                "version": "0.9.8y"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": true,
+                "id": 99,
+                "name": "OpenSSL",
+                "version": "1.0.1l"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": true,
+                "id": 98,
+                "name": "OpenSSL",
+                "version": "1.0.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "5.1.9",
+                "id": 32,
+                "isReference": false,
+                "name": "Safari",
+                "platform": "OS X 10.6.8"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "6",
+                "id": 33,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 6.0.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "6.0.4",
+                "id": 34,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.8.4"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "7",
+                "id": 63,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 7.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "7",
+                "id": 35,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.9"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "8",
+                "id": 85,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 8.1.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "8",
+                "id": 87,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.10"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 92,
+                "name": "Yahoo Slurp",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 93,
+                "name": "YandexBot",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            }
+          ]
+        },
+        "sniRequired": false,
+        "nonPrefixDelegation": true,
+        "prefixDelegation": false,
+        "freak": false,
+        "rc4WithModern": false,
+        "protocols": [
+          {
+            "id": 769,
+            "name": "TLS",
+            "version": "1.0"
+          },
+          {
+            "id": 770,
+            "name": "TLS",
+            "version": "1.1"
+          },
+          {
+            "id": 771,
+            "name": "TLS",
+            "version": "1.2"
+          }
+        ],
+        "hostStartTime": 1436191672153,
+        "chain": {
+          "certs": [
+            {
+              "subject": "CN=profile.theguardian.com,OU=COMODO SSL,OU=Issued through Guardian News & Media Ltd E-PKI Manager,OU=Domain Control Validated",
+              "label": "profile.theguardian.com",
+              "sigAlg": "SHA1withRSA",
+              "issuerLabel": "COMODO SSL CA",
+              "keySize": 2048,
+              "crlRevocationStatus": 2,
+              "issues": 8,
+              "raw": "-----BEGIN CERTIFICATE-----\nMIIFUDCCBDigAwIBAgIQXO2LXYbqf8ksVGHmjCHkrDANBgkqhkiG9w0BAQUFADBwMQswCQYDVQQG\r\nEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYD\r\nVQQKExFDT01PRE8gQ0EgTGltaXRlZDEWMBQGA1UEAxMNQ09NT0RPIFNTTCBDQTAeFw0xMzA5MDIw\r\nMDAwMDBaFw0xNTA5MDIyMzU5NTlaMIGbMSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0\r\nZWQxPzA9BgNVBAsUNklzc3VlZCB0aHJvdWdoIEd1YXJkaWFuIE5ld3MgJiBNZWRpYSBMdGQgRS1Q\r\nS0kgTWFuYWdlcjETMBEGA1UECxMKQ09NT0RPIFNTTDEgMB4GA1UEAxMXcHJvZmlsZS50aGVndWFy\r\nZGlhbi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBsaoM7wvXAMtMIJgfZW37\r\nMgrF6WOllrc5EMBoB1WB5cRaAUTynLgke8YOkU7cGN64CiPLDiBaWchU+2/W+RvWAaWnxxVfh7Cx\r\nlCsfRYg35EKOiEqLL4vzPbTod8Y5WhSjjk4+fJjXzCFXemsT5g4dELoSbfo/t+zQSBHzc/0jl0V/\r\nrXr179dpRHjldYsqR3xexzkkiJVKwdQ8AOFGQopjJB3fDMwpJmHuBSu5OEJprDbiMkPVuXeyAPnB\r\n3T7pXNi4T57iA4vke4/SHxtk3afMCbWHj2i6hhywFR/zQOWRXLB44MefPz+Gram+D8ZyySWstqND\r\nHn/LoB5vOLjFh1SZAgMBAAGjggG4MIIBtDAfBgNVHSMEGDAWgBQba70fikkYlFQ3VbQgF+03uXcY\r\nfTAdBgNVHQ4EFgQUYLwEzJOO7lO0J9ZiThk2OYqgFiQwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB\r\n/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCME8GA1UdIARIMEYwOgYLKwYBBAGy\r\nMQECAgcwKzApBggrBgEFBQcCARYdaHR0cHM6Ly9zZWN1cmUuY29tb2RvLmNvbS9DUFMwCAYGZ4EM\r\nAQIBMDgGA1UdHwQxMC8wLaAroCmGJ2h0dHA6Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET1NTTENB\r\nLmNybDBpBggrBgEFBQcBAQRdMFswMwYIKwYBBQUHMAKGJ2h0dHA6Ly9jcnQuY29tb2RvY2EuY29t\r\nL0NPTU9ET1NTTENBLmNydDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMD8G\r\nA1UdEQQ4MDaCF3Byb2ZpbGUudGhlZ3VhcmRpYW4uY29tght3d3cucHJvZmlsZS50aGVndWFyZGlh\r\nbi5jb20wDQYJKoZIhvcNAQEFBQADggEBAFWUJwqdswZdQx+0IRnotwAW0on1h8FP9KaTvAjqHskF\r\nOe1ny7fc/lsgRhlDEp95UIerqvkzujpHkViylNG0fpi2Uz+Q/oMJbX2uromMEiyS9zz1oGZG3sYP\r\nDF70E/+Z2ScU8/J6PPVLGrZWNjQbop/PpZSbDSg6S/6euj8ZrKLbC+BMHCs4vvrDy45yDUpLfCNm\r\nTt7WFoW1HY4E+4wAxrHQCQRu8gQM+FddzgWQT0D2gJLi8mcp3ICFJqYEu99C1wrRZs49MrIMrvy9\r\nJbVjETkfwoplodqbUF9lAEC4HQ+mbBPfGbFs3qUjbZFvkHVD/PH6dz1S3zPN+IRgTqj+PQc=\r\n-----END CERTIFICATE-----\n",
+              "notAfter": 1441238399000,
+              "keyStrength": 2048,
+              "keyAlg": "RSA",
+              "notBefore": 1378080000000,
+              "ocspRevocationStatus": 2,
+              "revocationStatus": 2,
+              "issuerSubject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB"
+            },
+            {
+              "subject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB",
+              "label": "COMODO SSL CA",
+              "sigAlg": "SHA1withRSA",
+              "issuerLabel": "AddTrust External CA Root",
+              "keySize": 2048,
+              "crlRevocationStatus": 2,
+              "issues": 8,
+              "raw": "-----BEGIN CERTIFICATE-----\nMIIE4jCCA8qgAwIBAgIQbrrwj3mD+p3hsm+W/G6YvzANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQG\r\nEwJTRTEUMBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFkZFRydXN0IEV4dGVybmFsIFRU\r\nUCBOZXR3b3JrMSIwIAYDVQQDExlBZGRUcnVzdCBFeHRlcm5hbCBDQSBSb290MB4XDTExMDgyMzAw\r\nMDAwMFoXDTIwMDUzMDEwNDgzOFowcDELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFu\r\nY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxFjAU\r\nBgNVBAMTDUNPTU9ETyBTU0wgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUKy4c\r\n0qP4f1UUQN73RN2EVfeFe1VmaaflWetlg/TzdrFmw09OmJMJt0Cz0RegEgmogOEpY5cCjDGdCgLg\r\nWVu77TC1735drwhOjYvCOVYWmHOUeArJpk8ot6g0N9slIbE8mfbgEj5z6mQyn0IGPBnYCgR6TFdJ\r\nK9J3etAAvF76ju7MwuQTbiVf3DykiKPcSce8xw/dGcCxcu147ziDCkUXG8l9ne3fqywso3WuW4Id\r\niIONzghlDGYmVwWhDN/mB4QLhKPIq9WVR7/c3P4d/AKTRAHK5rW3axYwAV3piQmVnvheKVzdx1WM\r\n8o4gTkB65PVFA7SYK8SAflOHb8LSV7DpAgMBAAGjggF3MIIBczAfBgNVHSMEGDAWgBStvZh6NLQm\r\n9/rEJlTvA73gJMtUGjAdBgNVHQ4EFgQUG2u9H4pJGJRUN1W0IBftN7l3GH0wDgYDVR0PAQH/BAQD\r\nAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAwEQYDVR0gBAowCDAGBgRVHSAAMEQGA1UdHwQ9MDswOaA3\r\noDWGM2h0dHA6Ly9jcmwudXNlcnRydXN0LmNvbS9BZGRUcnVzdEV4dGVybmFsQ0FSb290LmNybDCB\r\nswYIKwYBBQUHAQEEgaYwgaMwPwYIKwYBBQUHMAKGM2h0dHA6Ly9jcnQudXNlcnRydXN0LmNvbS9B\r\nZGRUcnVzdEV4dGVybmFsQ0FSb290LnA3YzA5BggrBgEFBQcwAoYtaHR0cDovL2NydC51c2VydHJ1\r\nc3QuY29tL0FkZFRydXN0VVROU0dDQ0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2Vy\r\ndHJ1c3QuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQBDJTkjBwSsmV1ZZz3mL2F9WlZ7/AaNs0ud+tUF\r\nTA1mtb08x6Iqa7XP5rqDPmCQNgzVwu2KldmSQiMcA3Y+wkjxdXKds4zPs1g0VkkdoS4rPbLoWhBG\r\n3mS1Ta5LbvwBtyEQ1ZW36yy+FAbMQS7kbOJGkP/GKH5z/uUXuoLDEAWBZsKLKDigRD7p5M4zsHz4\r\n4VOduLTL2sku2ZNwjnwL43M+mZmP6+ERRDXYYIFiRdTeRVuQLkkbG9ukD4BiIXNp8ePebdhIfFYS\r\nJiIRRwHGXhnCtJWX7mEAVfEEOPyE5ni0DUO+QzPdaNMiWwD7FILoS2J5MM/TlZ+zuYQB1N3PIxL4\r\n-----END CERTIFICATE-----\n",
+              "notAfter": 1590835718000,
+              "keyStrength": 2048,
+              "keyAlg": "RSA",
+              "notBefore": 1314057600000,
+              "ocspRevocationStatus": 2,
+              "revocationStatus": 2,
+              "issuerSubject": "CN=AddTrust External CA Root,OU=AddTrust External TTP Network,O=AddTrust AB,C=SE"
+            }
+          ],
+          "issues": 0
+        },
+        "suites": {
+          "preference": true,
+          "list": [
+            {
+              "id": 49199,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49191,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49171,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49200,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 49192,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 49172,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+              "cipherStrength": 256
+            },
+            {
+              "id": 156,
+              "name": "TLS_RSA_WITH_AES_128_GCM_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 60,
+              "name": "TLS_RSA_WITH_AES_128_CBC_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 47,
+              "name": "TLS_RSA_WITH_AES_128_CBC_SHA",
+              "cipherStrength": 128
+            },
+            {
+              "id": 157,
+              "name": "TLS_RSA_WITH_AES_256_GCM_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 61,
+              "name": "TLS_RSA_WITH_AES_256_CBC_SHA256",
+              "cipherStrength": 256
+            },
+            {
+              "id": 53,
+              "name": "TLS_RSA_WITH_AES_256_CBC_SHA",
+              "cipherStrength": 256
+            },
+            {
+              "id": 10,
+              "name": "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+              "cipherStrength": 168
+            }
+          ]
+        },
+        "vulnBeast": true,
+        "heartbeat": false,
+        "poodle": false,
+        "httpStatusCode": 404,
+        "cert": {
+          "subject": "CN=profile.theguardian.com,OU=COMODO SSL,OU=Issued through Guardian News & Media Ltd E-PKI Manager,OU=Domain Control Validated",
+          "commonNames": [
+            "profile.theguardian.com"
+          ],
+          "issuerLabel": "COMODO SSL CA",
+          "sigAlg": "SHA1withRSA",
+          "revocationInfo": 3,
+          "crlRevocationStatus": 2,
+          "sgc": 0,
+          "ocspURIs": [
+            "http://ocsp.comodoca.com"
+          ],
+          "validationType": "D",
+          "notAfter": 1441238399000,
+          "issues": 0,
+          "altNames": [
+            "profile.theguardian.com",
+            "www.profile.theguardian.com"
+          ],
+          "sct": false,
+          "ocspRevocationStatus": 2,
+          "notBefore": 1378080000000,
+          "revocationStatus": 2,
+          "issuerSubject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB",
+          "crlURIs": [
+            "http://crl.comodoca.com/COMODOSSLCA.crl"
+          ]
+        },
+        "compressionMethods": 0,
+        "openSslCcs": 1,
+        "poodleTls": 1,
+        "fallbackScsv": true,
+        "sessionResumption": 2,
+        "forwardSecrecy": 2,
+        "heartbleed": false,
+        "sessionTickets": 1,
+        "hasSct": 0,
+        "ocspStapling": false,
+        "supportsNpn": false,
+        "supportsRc4": false
+      },
+      "progress": 100,
+      "gradeTrustIgnored": "A",
+      "isExceptional": false,
+      "duration": 189360,
+      "grade": "A",
+      "statusMessage": "Ready",
+      "delegation": 1
+    },
+    {
+      "hasWarnings": false,
+      "eta": 32,
+      "serverName": "ec2-54-247-160-214.eu-west-1.compute.amazonaws.com",
+      "ipAddress": "54.247.160.214",
+      "details": {
+        "key": {
+          "size": 2048,
+          "strength": 2048,
+          "alg": "RSA",
+          "debianFlaw": false
+        },
+        "renegSupport": 6,
+        "sims": {
+          "results": [
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 56,
+                "name": "Android",
+                "version": "2.3.7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 58,
+                "name": "Android",
+                "version": "4.0.4"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 59,
+                "name": "Android",
+                "version": "4.1.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 60,
+                "name": "Android",
+                "version": "4.2.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 61,
+                "name": "Android",
+                "version": "4.3"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 62,
+                "name": "Android",
+                "version": "4.4.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 88,
+                "name": "Android",
+                "version": "5.0.0"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 94,
+                "name": "Baidu",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 91,
+                "name": "BingPreview",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "42",
+                "id": 105,
+                "isReference": true,
+                "name": "Chrome",
+                "platform": "OS X"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "31.3.0 ESR",
+                "id": 84,
+                "isReference": false,
+                "name": "Firefox",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "37",
+                "id": 103,
+                "isReference": true,
+                "name": "Firefox",
+                "platform": "OS X"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 97,
+                "name": "Googlebot",
+                "version": "Feb 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "attempts": 1,
+              "client": {
+                "version": "6",
+                "id": 100,
+                "isReference": false,
+                "name": "IE",
+                "platform": "XP"
+              },
+              "errorCode": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "7",
+                "id": 19,
+                "isReference": false,
+                "name": "IE",
+                "platform": "Vista"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 10,
+              "client": {
+                "version": "8",
+                "id": 101,
+                "isReference": false,
+                "name": "IE",
+                "platform": "XP"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "8-10",
+                "id": 23,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 102,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 104,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 8.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "10",
+                "id": 64,
+                "isReference": false,
+                "name": "IE Mobile",
+                "platform": "Win Phone 8.0"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 106,
+                "isReference": false,
+                "name": "IE Mobile",
+                "platform": "Win Phone 8.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 25,
+                "name": "Java",
+                "version": "6u45"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 26,
+                "name": "Java",
+                "version": "7u25"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 86,
+                "name": "Java",
+                "version": "8u31"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 27,
+                "name": "OpenSSL",
+                "version": "0.9.8y"
+              },
+              "attempts": 1
+            },
+            {
+              "attempts": 1,
+              "client": {
+                "isReference": true,
+                "id": 99,
+                "name": "OpenSSL",
+                "version": "1.0.1l"
+              },
+              "errorCode": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": true,
+                "id": 98,
+                "name": "OpenSSL",
+                "version": "1.0.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "5.1.9",
+                "id": 32,
+                "isReference": false,
+                "name": "Safari",
+                "platform": "OS X 10.6.8"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "6",
+                "id": 33,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 6.0.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "6.0.4",
+                "id": 34,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.8.4"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "7",
+                "id": 63,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 7.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "7",
+                "id": 35,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.9"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "8",
+                "id": 85,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 8.1.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "8",
+                "id": 87,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.10"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 92,
+                "name": "Yahoo Slurp",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 93,
+                "name": "YandexBot",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            }
+          ]
+        },
+        "sniRequired": false,
+        "nonPrefixDelegation": true,
+        "prefixDelegation": false,
+        "freak": false,
+        "rc4WithModern": false,
+        "protocols": [
+          {
+            "id": 769,
+            "name": "TLS",
+            "version": "1.0"
+          },
+          {
+            "id": 770,
+            "name": "TLS",
+            "version": "1.1"
+          },
+          {
+            "id": 771,
+            "name": "TLS",
+            "version": "1.2"
+          }
+        ],
+        "hostStartTime": 1436191672153,
+        "chain": {
+          "certs": [
+            {
+              "subject": "CN=profile.theguardian.com,OU=COMODO SSL,OU=Issued through Guardian News & Media Ltd E-PKI Manager,OU=Domain Control Validated",
+              "label": "profile.theguardian.com",
+              "sigAlg": "SHA1withRSA",
+              "issuerLabel": "COMODO SSL CA",
+              "keySize": 2048,
+              "crlRevocationStatus": 2,
+              "issues": 8,
+              "raw": "-----BEGIN CERTIFICATE-----\nMIIFUDCCBDigAwIBAgIQXO2LXYbqf8ksVGHmjCHkrDANBgkqhkiG9w0BAQUFADBwMQswCQYDVQQG\r\nEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYD\r\nVQQKExFDT01PRE8gQ0EgTGltaXRlZDEWMBQGA1UEAxMNQ09NT0RPIFNTTCBDQTAeFw0xMzA5MDIw\r\nMDAwMDBaFw0xNTA5MDIyMzU5NTlaMIGbMSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0\r\nZWQxPzA9BgNVBAsUNklzc3VlZCB0aHJvdWdoIEd1YXJkaWFuIE5ld3MgJiBNZWRpYSBMdGQgRS1Q\r\nS0kgTWFuYWdlcjETMBEGA1UECxMKQ09NT0RPIFNTTDEgMB4GA1UEAxMXcHJvZmlsZS50aGVndWFy\r\nZGlhbi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBsaoM7wvXAMtMIJgfZW37\r\nMgrF6WOllrc5EMBoB1WB5cRaAUTynLgke8YOkU7cGN64CiPLDiBaWchU+2/W+RvWAaWnxxVfh7Cx\r\nlCsfRYg35EKOiEqLL4vzPbTod8Y5WhSjjk4+fJjXzCFXemsT5g4dELoSbfo/t+zQSBHzc/0jl0V/\r\nrXr179dpRHjldYsqR3xexzkkiJVKwdQ8AOFGQopjJB3fDMwpJmHuBSu5OEJprDbiMkPVuXeyAPnB\r\n3T7pXNi4T57iA4vke4/SHxtk3afMCbWHj2i6hhywFR/zQOWRXLB44MefPz+Gram+D8ZyySWstqND\r\nHn/LoB5vOLjFh1SZAgMBAAGjggG4MIIBtDAfBgNVHSMEGDAWgBQba70fikkYlFQ3VbQgF+03uXcY\r\nfTAdBgNVHQ4EFgQUYLwEzJOO7lO0J9ZiThk2OYqgFiQwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB\r\n/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCME8GA1UdIARIMEYwOgYLKwYBBAGy\r\nMQECAgcwKzApBggrBgEFBQcCARYdaHR0cHM6Ly9zZWN1cmUuY29tb2RvLmNvbS9DUFMwCAYGZ4EM\r\nAQIBMDgGA1UdHwQxMC8wLaAroCmGJ2h0dHA6Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET1NTTENB\r\nLmNybDBpBggrBgEFBQcBAQRdMFswMwYIKwYBBQUHMAKGJ2h0dHA6Ly9jcnQuY29tb2RvY2EuY29t\r\nL0NPTU9ET1NTTENBLmNydDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMD8G\r\nA1UdEQQ4MDaCF3Byb2ZpbGUudGhlZ3VhcmRpYW4uY29tght3d3cucHJvZmlsZS50aGVndWFyZGlh\r\nbi5jb20wDQYJKoZIhvcNAQEFBQADggEBAFWUJwqdswZdQx+0IRnotwAW0on1h8FP9KaTvAjqHskF\r\nOe1ny7fc/lsgRhlDEp95UIerqvkzujpHkViylNG0fpi2Uz+Q/oMJbX2uromMEiyS9zz1oGZG3sYP\r\nDF70E/+Z2ScU8/J6PPVLGrZWNjQbop/PpZSbDSg6S/6euj8ZrKLbC+BMHCs4vvrDy45yDUpLfCNm\r\nTt7WFoW1HY4E+4wAxrHQCQRu8gQM+FddzgWQT0D2gJLi8mcp3ICFJqYEu99C1wrRZs49MrIMrvy9\r\nJbVjETkfwoplodqbUF9lAEC4HQ+mbBPfGbFs3qUjbZFvkHVD/PH6dz1S3zPN+IRgTqj+PQc=\r\n-----END CERTIFICATE-----\n",
+              "notAfter": 1441238399000,
+              "keyStrength": 2048,
+              "keyAlg": "RSA",
+              "notBefore": 1378080000000,
+              "ocspRevocationStatus": 2,
+              "revocationStatus": 2,
+              "issuerSubject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB"
+            },
+            {
+              "subject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB",
+              "label": "COMODO SSL CA",
+              "sigAlg": "SHA1withRSA",
+              "issuerLabel": "AddTrust External CA Root",
+              "keySize": 2048,
+              "crlRevocationStatus": 2,
+              "issues": 8,
+              "raw": "-----BEGIN CERTIFICATE-----\nMIIE4jCCA8qgAwIBAgIQbrrwj3mD+p3hsm+W/G6YvzANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQG\r\nEwJTRTEUMBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFkZFRydXN0IEV4dGVybmFsIFRU\r\nUCBOZXR3b3JrMSIwIAYDVQQDExlBZGRUcnVzdCBFeHRlcm5hbCBDQSBSb290MB4XDTExMDgyMzAw\r\nMDAwMFoXDTIwMDUzMDEwNDgzOFowcDELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFu\r\nY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxFjAU\r\nBgNVBAMTDUNPTU9ETyBTU0wgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUKy4c\r\n0qP4f1UUQN73RN2EVfeFe1VmaaflWetlg/TzdrFmw09OmJMJt0Cz0RegEgmogOEpY5cCjDGdCgLg\r\nWVu77TC1735drwhOjYvCOVYWmHOUeArJpk8ot6g0N9slIbE8mfbgEj5z6mQyn0IGPBnYCgR6TFdJ\r\nK9J3etAAvF76ju7MwuQTbiVf3DykiKPcSce8xw/dGcCxcu147ziDCkUXG8l9ne3fqywso3WuW4Id\r\niIONzghlDGYmVwWhDN/mB4QLhKPIq9WVR7/c3P4d/AKTRAHK5rW3axYwAV3piQmVnvheKVzdx1WM\r\n8o4gTkB65PVFA7SYK8SAflOHb8LSV7DpAgMBAAGjggF3MIIBczAfBgNVHSMEGDAWgBStvZh6NLQm\r\n9/rEJlTvA73gJMtUGjAdBgNVHQ4EFgQUG2u9H4pJGJRUN1W0IBftN7l3GH0wDgYDVR0PAQH/BAQD\r\nAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAwEQYDVR0gBAowCDAGBgRVHSAAMEQGA1UdHwQ9MDswOaA3\r\noDWGM2h0dHA6Ly9jcmwudXNlcnRydXN0LmNvbS9BZGRUcnVzdEV4dGVybmFsQ0FSb290LmNybDCB\r\nswYIKwYBBQUHAQEEgaYwgaMwPwYIKwYBBQUHMAKGM2h0dHA6Ly9jcnQudXNlcnRydXN0LmNvbS9B\r\nZGRUcnVzdEV4dGVybmFsQ0FSb290LnA3YzA5BggrBgEFBQcwAoYtaHR0cDovL2NydC51c2VydHJ1\r\nc3QuY29tL0FkZFRydXN0VVROU0dDQ0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2Vy\r\ndHJ1c3QuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQBDJTkjBwSsmV1ZZz3mL2F9WlZ7/AaNs0ud+tUF\r\nTA1mtb08x6Iqa7XP5rqDPmCQNgzVwu2KldmSQiMcA3Y+wkjxdXKds4zPs1g0VkkdoS4rPbLoWhBG\r\n3mS1Ta5LbvwBtyEQ1ZW36yy+FAbMQS7kbOJGkP/GKH5z/uUXuoLDEAWBZsKLKDigRD7p5M4zsHz4\r\n4VOduLTL2sku2ZNwjnwL43M+mZmP6+ERRDXYYIFiRdTeRVuQLkkbG9ukD4BiIXNp8ePebdhIfFYS\r\nJiIRRwHGXhnCtJWX7mEAVfEEOPyE5ni0DUO+QzPdaNMiWwD7FILoS2J5MM/TlZ+zuYQB1N3PIxL4\r\n-----END CERTIFICATE-----\n",
+              "notAfter": 1590835718000,
+              "keyStrength": 2048,
+              "keyAlg": "RSA",
+              "notBefore": 1314057600000,
+              "ocspRevocationStatus": 2,
+              "revocationStatus": 2,
+              "issuerSubject": "CN=AddTrust External CA Root,OU=AddTrust External TTP Network,O=AddTrust AB,C=SE"
+            }
+          ],
+          "issues": 0
+        },
+        "suites": {
+          "preference": true,
+          "list": [
+            {
+              "id": 49199,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49191,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49171,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49200,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 49192,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 49172,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+              "cipherStrength": 256
+            },
+            {
+              "id": 156,
+              "name": "TLS_RSA_WITH_AES_128_GCM_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 47,
+              "name": "TLS_RSA_WITH_AES_128_CBC_SHA",
+              "cipherStrength": 128
+            },
+            {
+              "id": 157,
+              "name": "TLS_RSA_WITH_AES_256_GCM_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 61,
+              "name": "TLS_RSA_WITH_AES_256_CBC_SHA256",
+              "cipherStrength": 256
+            },
+            {
+              "id": 53,
+              "name": "TLS_RSA_WITH_AES_256_CBC_SHA",
+              "cipherStrength": 256
+            },
+            {
+              "id": 10,
+              "name": "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+              "cipherStrength": 168
+            }
+          ]
+        },
+        "vulnBeast": true,
+        "heartbeat": false,
+        "poodle": false,
+        "httpStatusCode": 404,
+        "cert": {
+          "subject": "CN=profile.theguardian.com,OU=COMODO SSL,OU=Issued through Guardian News & Media Ltd E-PKI Manager,OU=Domain Control Validated",
+          "commonNames": [
+            "profile.theguardian.com"
+          ],
+          "issuerLabel": "COMODO SSL CA",
+          "sigAlg": "SHA1withRSA",
+          "revocationInfo": 3,
+          "crlRevocationStatus": 2,
+          "sgc": 0,
+          "ocspURIs": [
+            "http://ocsp.comodoca.com"
+          ],
+          "validationType": "D",
+          "notAfter": 1441238399000,
+          "issues": 0,
+          "altNames": [
+            "profile.theguardian.com",
+            "www.profile.theguardian.com"
+          ],
+          "sct": false,
+          "ocspRevocationStatus": 2,
+          "notBefore": 1378080000000,
+          "revocationStatus": 2,
+          "issuerSubject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB",
+          "crlURIs": [
+            "http://crl.comodoca.com/COMODOSSLCA.crl"
+          ]
+        },
+        "compressionMethods": 0,
+        "openSslCcs": 1,
+        "poodleTls": 1,
+        "fallbackScsv": true,
+        "sessionResumption": 2,
+        "forwardSecrecy": 2,
+        "heartbleed": false,
+        "sessionTickets": 1,
+        "hasSct": 0,
+        "ocspStapling": false,
+        "supportsNpn": false,
+        "supportsRc4": false
+      },
+      "progress": 100,
+      "gradeTrustIgnored": "A",
+      "isExceptional": false,
+      "duration": 231568,
+      "grade": "A",
+      "statusMessage": "Ready",
+      "delegation": 1
+    },
+    {
+      "hasWarnings": false,
+      "eta": 28,
+      "serverName": "ec2-54-217-230-142.eu-west-1.compute.amazonaws.com",
+      "ipAddress": "54.217.230.142",
+      "details": {
+        "key": {
+          "size": 2048,
+          "strength": 2048,
+          "alg": "RSA",
+          "debianFlaw": false
+        },
+        "renegSupport": 6,
+        "sims": {
+          "results": [
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 56,
+                "name": "Android",
+                "version": "2.3.7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 58,
+                "name": "Android",
+                "version": "4.0.4"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 59,
+                "name": "Android",
+                "version": "4.1.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 60,
+                "name": "Android",
+                "version": "4.2.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 61,
+                "name": "Android",
+                "version": "4.3"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 62,
+                "name": "Android",
+                "version": "4.4.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 88,
+                "name": "Android",
+                "version": "5.0.0"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 94,
+                "name": "Baidu",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 91,
+                "name": "BingPreview",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "42",
+                "id": 105,
+                "isReference": true,
+                "name": "Chrome",
+                "platform": "OS X"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "31.3.0 ESR",
+                "id": 84,
+                "isReference": false,
+                "name": "Firefox",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "version": "37",
+                "id": 103,
+                "isReference": true,
+                "name": "Firefox",
+                "platform": "OS X"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 97,
+                "name": "Googlebot",
+                "version": "Feb 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "attempts": 1,
+              "client": {
+                "version": "6",
+                "id": 100,
+                "isReference": false,
+                "name": "IE",
+                "platform": "XP"
+              },
+              "errorCode": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "7",
+                "id": 19,
+                "isReference": false,
+                "name": "IE",
+                "platform": "Vista"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 10,
+              "client": {
+                "version": "8",
+                "id": 101,
+                "isReference": false,
+                "name": "IE",
+                "platform": "XP"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "8-10",
+                "id": 23,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 102,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 7"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 104,
+                "isReference": true,
+                "name": "IE",
+                "platform": "Win 8.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "10",
+                "id": 64,
+                "isReference": false,
+                "name": "IE Mobile",
+                "platform": "Win Phone 8.0"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "11",
+                "id": 106,
+                "isReference": false,
+                "name": "IE Mobile",
+                "platform": "Win Phone 8.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 25,
+                "name": "Java",
+                "version": "6u45"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "isReference": false,
+                "id": 26,
+                "name": "Java",
+                "version": "7u25"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 86,
+                "name": "Java",
+                "version": "8u31"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 47,
+              "client": {
+                "isReference": false,
+                "id": 27,
+                "name": "OpenSSL",
+                "version": "0.9.8y"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": true,
+                "id": 99,
+                "name": "OpenSSL",
+                "version": "1.0.1l"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": true,
+                "id": 98,
+                "name": "OpenSSL",
+                "version": "1.0.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "5.1.9",
+                "id": 32,
+                "isReference": false,
+                "name": "Safari",
+                "platform": "OS X 10.6.8"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "6",
+                "id": 33,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 6.0.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 769,
+              "suiteId": 49171,
+              "client": {
+                "version": "6.0.4",
+                "id": 34,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.8.4"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "7",
+                "id": 63,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 7.1"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "7",
+                "id": 35,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.9"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "8",
+                "id": 85,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "iOS 8.1.2"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49191,
+              "client": {
+                "version": "8",
+                "id": 87,
+                "isReference": true,
+                "name": "Safari",
+                "platform": "OS X 10.10"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 92,
+                "name": "Yahoo Slurp",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            },
+            {
+              "errorCode": 0,
+              "protocolId": 771,
+              "suiteId": 49199,
+              "client": {
+                "isReference": false,
+                "id": 93,
+                "name": "YandexBot",
+                "version": "Jan 2015"
+              },
+              "attempts": 1
+            }
+          ]
+        },
+        "sniRequired": false,
+        "nonPrefixDelegation": true,
+        "prefixDelegation": false,
+        "freak": false,
+        "rc4WithModern": false,
+        "protocols": [
+          {
+            "id": 769,
+            "name": "TLS",
+            "version": "1.0"
+          },
+          {
+            "id": 770,
+            "name": "TLS",
+            "version": "1.1"
+          },
+          {
+            "id": 771,
+            "name": "TLS",
+            "version": "1.2"
+          }
+        ],
+        "hostStartTime": 1436191672153,
+        "chain": {
+          "certs": [
+            {
+              "subject": "CN=profile.theguardian.com,OU=COMODO SSL,OU=Issued through Guardian News & Media Ltd E-PKI Manager,OU=Domain Control Validated",
+              "label": "profile.theguardian.com",
+              "sigAlg": "SHA1withRSA",
+              "issuerLabel": "COMODO SSL CA",
+              "keySize": 2048,
+              "crlRevocationStatus": 2,
+              "issues": 8,
+              "raw": "-----BEGIN CERTIFICATE-----\nMIIFUDCCBDigAwIBAgIQXO2LXYbqf8ksVGHmjCHkrDANBgkqhkiG9w0BAQUFADBwMQswCQYDVQQG\r\nEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYD\r\nVQQKExFDT01PRE8gQ0EgTGltaXRlZDEWMBQGA1UEAxMNQ09NT0RPIFNTTCBDQTAeFw0xMzA5MDIw\r\nMDAwMDBaFw0xNTA5MDIyMzU5NTlaMIGbMSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0\r\nZWQxPzA9BgNVBAsUNklzc3VlZCB0aHJvdWdoIEd1YXJkaWFuIE5ld3MgJiBNZWRpYSBMdGQgRS1Q\r\nS0kgTWFuYWdlcjETMBEGA1UECxMKQ09NT0RPIFNTTDEgMB4GA1UEAxMXcHJvZmlsZS50aGVndWFy\r\nZGlhbi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBsaoM7wvXAMtMIJgfZW37\r\nMgrF6WOllrc5EMBoB1WB5cRaAUTynLgke8YOkU7cGN64CiPLDiBaWchU+2/W+RvWAaWnxxVfh7Cx\r\nlCsfRYg35EKOiEqLL4vzPbTod8Y5WhSjjk4+fJjXzCFXemsT5g4dELoSbfo/t+zQSBHzc/0jl0V/\r\nrXr179dpRHjldYsqR3xexzkkiJVKwdQ8AOFGQopjJB3fDMwpJmHuBSu5OEJprDbiMkPVuXeyAPnB\r\n3T7pXNi4T57iA4vke4/SHxtk3afMCbWHj2i6hhywFR/zQOWRXLB44MefPz+Gram+D8ZyySWstqND\r\nHn/LoB5vOLjFh1SZAgMBAAGjggG4MIIBtDAfBgNVHSMEGDAWgBQba70fikkYlFQ3VbQgF+03uXcY\r\nfTAdBgNVHQ4EFgQUYLwEzJOO7lO0J9ZiThk2OYqgFiQwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB\r\n/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCME8GA1UdIARIMEYwOgYLKwYBBAGy\r\nMQECAgcwKzApBggrBgEFBQcCARYdaHR0cHM6Ly9zZWN1cmUuY29tb2RvLmNvbS9DUFMwCAYGZ4EM\r\nAQIBMDgGA1UdHwQxMC8wLaAroCmGJ2h0dHA6Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET1NTTENB\r\nLmNybDBpBggrBgEFBQcBAQRdMFswMwYIKwYBBQUHMAKGJ2h0dHA6Ly9jcnQuY29tb2RvY2EuY29t\r\nL0NPTU9ET1NTTENBLmNydDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMD8G\r\nA1UdEQQ4MDaCF3Byb2ZpbGUudGhlZ3VhcmRpYW4uY29tght3d3cucHJvZmlsZS50aGVndWFyZGlh\r\nbi5jb20wDQYJKoZIhvcNAQEFBQADggEBAFWUJwqdswZdQx+0IRnotwAW0on1h8FP9KaTvAjqHskF\r\nOe1ny7fc/lsgRhlDEp95UIerqvkzujpHkViylNG0fpi2Uz+Q/oMJbX2uromMEiyS9zz1oGZG3sYP\r\nDF70E/+Z2ScU8/J6PPVLGrZWNjQbop/PpZSbDSg6S/6euj8ZrKLbC+BMHCs4vvrDy45yDUpLfCNm\r\nTt7WFoW1HY4E+4wAxrHQCQRu8gQM+FddzgWQT0D2gJLi8mcp3ICFJqYEu99C1wrRZs49MrIMrvy9\r\nJbVjETkfwoplodqbUF9lAEC4HQ+mbBPfGbFs3qUjbZFvkHVD/PH6dz1S3zPN+IRgTqj+PQc=\r\n-----END CERTIFICATE-----\n",
+              "notAfter": 1441238399000,
+              "keyStrength": 2048,
+              "keyAlg": "RSA",
+              "notBefore": 1378080000000,
+              "ocspRevocationStatus": 2,
+              "revocationStatus": 2,
+              "issuerSubject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB"
+            },
+            {
+              "subject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB",
+              "label": "COMODO SSL CA",
+              "sigAlg": "SHA1withRSA",
+              "issuerLabel": "AddTrust External CA Root",
+              "keySize": 2048,
+              "crlRevocationStatus": 2,
+              "issues": 8,
+              "raw": "-----BEGIN CERTIFICATE-----\nMIIE4jCCA8qgAwIBAgIQbrrwj3mD+p3hsm+W/G6YvzANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQG\r\nEwJTRTEUMBIGA1UEChMLQWRkVHJ1c3QgQUIxJjAkBgNVBAsTHUFkZFRydXN0IEV4dGVybmFsIFRU\r\nUCBOZXR3b3JrMSIwIAYDVQQDExlBZGRUcnVzdCBFeHRlcm5hbCBDQSBSb290MB4XDTExMDgyMzAw\r\nMDAwMFoXDTIwMDUzMDEwNDgzOFowcDELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFu\r\nY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxFjAU\r\nBgNVBAMTDUNPTU9ETyBTU0wgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUKy4c\r\n0qP4f1UUQN73RN2EVfeFe1VmaaflWetlg/TzdrFmw09OmJMJt0Cz0RegEgmogOEpY5cCjDGdCgLg\r\nWVu77TC1735drwhOjYvCOVYWmHOUeArJpk8ot6g0N9slIbE8mfbgEj5z6mQyn0IGPBnYCgR6TFdJ\r\nK9J3etAAvF76ju7MwuQTbiVf3DykiKPcSce8xw/dGcCxcu147ziDCkUXG8l9ne3fqywso3WuW4Id\r\niIONzghlDGYmVwWhDN/mB4QLhKPIq9WVR7/c3P4d/AKTRAHK5rW3axYwAV3piQmVnvheKVzdx1WM\r\n8o4gTkB65PVFA7SYK8SAflOHb8LSV7DpAgMBAAGjggF3MIIBczAfBgNVHSMEGDAWgBStvZh6NLQm\r\n9/rEJlTvA73gJMtUGjAdBgNVHQ4EFgQUG2u9H4pJGJRUN1W0IBftN7l3GH0wDgYDVR0PAQH/BAQD\r\nAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAwEQYDVR0gBAowCDAGBgRVHSAAMEQGA1UdHwQ9MDswOaA3\r\noDWGM2h0dHA6Ly9jcmwudXNlcnRydXN0LmNvbS9BZGRUcnVzdEV4dGVybmFsQ0FSb290LmNybDCB\r\nswYIKwYBBQUHAQEEgaYwgaMwPwYIKwYBBQUHMAKGM2h0dHA6Ly9jcnQudXNlcnRydXN0LmNvbS9B\r\nZGRUcnVzdEV4dGVybmFsQ0FSb290LnA3YzA5BggrBgEFBQcwAoYtaHR0cDovL2NydC51c2VydHJ1\r\nc3QuY29tL0FkZFRydXN0VVROU0dDQ0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2Vy\r\ndHJ1c3QuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQBDJTkjBwSsmV1ZZz3mL2F9WlZ7/AaNs0ud+tUF\r\nTA1mtb08x6Iqa7XP5rqDPmCQNgzVwu2KldmSQiMcA3Y+wkjxdXKds4zPs1g0VkkdoS4rPbLoWhBG\r\n3mS1Ta5LbvwBtyEQ1ZW36yy+FAbMQS7kbOJGkP/GKH5z/uUXuoLDEAWBZsKLKDigRD7p5M4zsHz4\r\n4VOduLTL2sku2ZNwjnwL43M+mZmP6+ERRDXYYIFiRdTeRVuQLkkbG9ukD4BiIXNp8ePebdhIfFYS\r\nJiIRRwHGXhnCtJWX7mEAVfEEOPyE5ni0DUO+QzPdaNMiWwD7FILoS2J5MM/TlZ+zuYQB1N3PIxL4\r\n-----END CERTIFICATE-----\n",
+              "notAfter": 1590835718000,
+              "keyStrength": 2048,
+              "keyAlg": "RSA",
+              "notBefore": 1314057600000,
+              "ocspRevocationStatus": 2,
+              "revocationStatus": 2,
+              "issuerSubject": "CN=AddTrust External CA Root,OU=AddTrust External TTP Network,O=AddTrust AB,C=SE"
+            }
+          ],
+          "issues": 0
+        },
+        "suites": {
+          "preference": true,
+          "list": [
+            {
+              "id": 49199,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49191,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49171,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+              "cipherStrength": 128
+            },
+            {
+              "id": 49200,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 49192,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 49172,
+              "ecdhBits": 256,
+              "ecdhStrength": 3072,
+              "name": "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+              "cipherStrength": 256
+            },
+            {
+              "id": 156,
+              "name": "TLS_RSA_WITH_AES_128_GCM_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 60,
+              "name": "TLS_RSA_WITH_AES_128_CBC_SHA256",
+              "cipherStrength": 128
+            },
+            {
+              "id": 47,
+              "name": "TLS_RSA_WITH_AES_128_CBC_SHA",
+              "cipherStrength": 128
+            },
+            {
+              "id": 157,
+              "name": "TLS_RSA_WITH_AES_256_GCM_SHA384",
+              "cipherStrength": 256
+            },
+            {
+              "id": 61,
+              "name": "TLS_RSA_WITH_AES_256_CBC_SHA256",
+              "cipherStrength": 256
+            },
+            {
+              "id": 53,
+              "name": "TLS_RSA_WITH_AES_256_CBC_SHA",
+              "cipherStrength": 256
+            },
+            {
+              "id": 10,
+              "name": "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+              "cipherStrength": 168
+            }
+          ]
+        },
+        "vulnBeast": true,
+        "heartbeat": false,
+        "poodle": false,
+        "httpStatusCode": 404,
+        "cert": {
+          "subject": "CN=profile.theguardian.com,OU=COMODO SSL,OU=Issued through Guardian News & Media Ltd E-PKI Manager,OU=Domain Control Validated",
+          "commonNames": [
+            "profile.theguardian.com"
+          ],
+          "issuerLabel": "COMODO SSL CA",
+          "sigAlg": "SHA1withRSA",
+          "revocationInfo": 3,
+          "crlRevocationStatus": 2,
+          "sgc": 0,
+          "ocspURIs": [
+            "http://ocsp.comodoca.com"
+          ],
+          "validationType": "D",
+          "notAfter": 1441238399000,
+          "issues": 0,
+          "altNames": [
+            "profile.theguardian.com",
+            "www.profile.theguardian.com"
+          ],
+          "sct": false,
+          "ocspRevocationStatus": 2,
+          "notBefore": 1378080000000,
+          "revocationStatus": 2,
+          "issuerSubject": "CN=COMODO SSL CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB",
+          "crlURIs": [
+            "http://crl.comodoca.com/COMODOSSLCA.crl"
+          ]
+        },
+        "compressionMethods": 0,
+        "openSslCcs": 1,
+        "poodleTls": 1,
+        "fallbackScsv": true,
+        "sessionResumption": 2,
+        "forwardSecrecy": 2,
+        "heartbleed": false,
+        "sessionTickets": 1,
+        "hasSct": 0,
+        "ocspStapling": false,
+        "supportsNpn": false,
+        "supportsRc4": false
+      },
+      "progress": 100,
+      "gradeTrustIgnored": "A",
+      "isExceptional": false,
+      "duration": 236286,
+      "grade": "A",
+      "statusMessage": "Ready",
+      "delegation": 1
+    }
+  ],
+  "startTime": 1436191672153,
+  "criteriaVersion": "2009j"
+}

@@ -15,15 +15,17 @@ libraryDependencies ++= {
   val sprayV = "1.3.3"
   val sprayJsonV = "1.3.1"
   Seq(
-    "io.spray"            %%  "spray-can"     % sprayV,
-    "io.spray"            %%  "spray-routing" % sprayV,
-    "io.spray"            %%  "spray-client"  % sprayV,
-    "io.spray"            %%  "spray-caching" % sprayV,
-    "io.spray"            %%  "spray-testkit" % sprayV   % "test",
-    "com.typesafe.akka"   %%  "akka-actor"    % akkaV,
-    "com.typesafe.akka"   %%  "akka-slf4j"    % akkaV,
+    "io.spray"            %%  "spray-can"       % sprayV,
+    "io.spray"            %%  "spray-routing"   % sprayV,
+    "io.spray"            %%  "spray-client"    % sprayV,
+    "io.spray"            %%  "spray-caching"   % sprayV,
+    "io.spray"            %%  "spray-testkit"   % sprayV   % "test",
+    "com.typesafe.akka"   %%  "akka-actor"      % akkaV,
+    "com.typesafe.akka"   %%  "akka-slf4j"      % akkaV,
     "ch.qos.logback"      %   "logback-classic" % "1.1.2",
-    "net.liftweb"         % "lift-json_2.10"  % "2.5.1"
+    "org.json4s"          %% "json4s-native"    % "3.2.10",
+    "commons-validator"   % "commons-validator" % "1.4.0",
+    "org.scalatest"       % "scalatest_2.11"    % "2.2.4"  % "test"
   )
 }
 

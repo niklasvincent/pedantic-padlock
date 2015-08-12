@@ -44,7 +44,7 @@ class HttpRequestActor extends HttpServiceActor with HealthCheckDirective with L
   override def receive: Receive = runRoute(routeWithLogging)
 
   val route =
-      new StatusBadgeDirective().routes ~
+      new StatusBadgeDirective(Main.scanStateStorage).routes ~
       healthCheck
 
 }
