@@ -19,13 +19,15 @@ libraryDependencies ++= {
     "io.spray"            %%  "spray-routing"   % sprayV,
     "io.spray"            %%  "spray-client"    % sprayV,
     "io.spray"            %%  "spray-caching"   % sprayV,
-    "io.spray"            %%  "spray-testkit"   % sprayV   % "test",
     "com.typesafe.akka"   %%  "akka-actor"      % akkaV,
     "com.typesafe.akka"   %%  "akka-slf4j"      % akkaV,
+    "net.debasishg"       %%  "redisclient"     % "3.0",
     "ch.qos.logback"      %   "logback-classic" % "1.1.2",
     "org.json4s"          %% "json4s-native"    % "3.2.10",
     "commons-validator"   % "commons-validator" % "1.4.0",
-    "org.scalatest"       % "scalatest_2.11"    % "2.2.4"  % "test"
+    "io.spray"            %%  "spray-testkit"   % sprayV   % "test",
+    "org.scalatest"       % "scalatest_2.11"    % "2.2.4"  % "test",
+    "com.orange.redis-embedded" % "embedded-redis" % "0.6" % "test"
   )
 }
 
