@@ -1,19 +1,15 @@
 package info.lindblad.pedanticpadlock.model
 
 /* This represents the current state of a scan */
-abstract class ScanState(val domainName: String) {
-
-  def currentTime() = System.currentTimeMillis()
-
-  val timeCreated: Long = currentTime()
+trait ScanState {
 
 }
 
-class NotProcessed(override val domainName: String) extends ScanState(domainName: String)
+class NotProcessed(val domainName: String, val timeCreated: Long = System.currentTimeMillis()) extends ScanState
 
-class AwaitingResult(override val domainName: String, val scanReport: ScanReport, val timesPolled: Int = 0) extends ScanState(domainName: String)
+class AwaitingResult(val domainName: String, val scanReport: ScanReport, val timesPolled: Int = 0, val timeCreated: Long = System.currentTimeMillis()) extends ScanState
 
-class FinishedResult(override val domainName: String, val scanReport: ScanReport) extends ScanState(domainName: String) {
+class FinishedResult(val domainName: String, val scanReport: ScanReport, val timeCreated: Long = System.currentTimeMillis()) extends ScanState {
 
   def isExpired(now: Long, validDuration: Long): Boolean = {
     val expirationTime = timeCreated + validDuration
