@@ -20,7 +20,7 @@ A small microservice for generating SVG badges for your SSL terminating end-poin
 
 Change the Heroku application name in `build.sbt`:
 
-	herokuAppName in Compile := "pacific-meadow-xxxx"
+	herokuAppName in Compile := "pedantic-padlock
 
 Deploy using SBT:
 
@@ -30,9 +30,8 @@ Make sure the application started correctly:
 
 	heroku logs --app pacific-meadow-xxxx
 
+Optionally, to make the scan results persist during application restarts, add the Redis To Go add-on and it will be automatically picked up.
+
 ## Future Work
 
-- [ ] Improve SSL Labs background processing
-- [ ] Tune actor systems
-- [ ] Deploy to Heroku button (if possible)
-- [ ] Add dashboard as root page
+See [issues](https://github.com/nlindblad/pedantic-padlock/issues).
