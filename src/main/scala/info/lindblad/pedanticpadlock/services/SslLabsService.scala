@@ -15,7 +15,7 @@ import scala.concurrent.{Await, Future}
 
 trait SslLabsApi {
   def interpretReportJson(analysis: JValue): Option[SslLabsReport]
-  def analyse(domainName: String): Option[SslLabsReport]
+  def analyse(domainName: String, currentTime: Long, lastTimePolled: Long, pollInterval: Long): Option[SslLabsReport]
 }
 
 trait SslLabsApiClient {
@@ -61,8 +61,26 @@ class SslLabsService(apiBaseUrl: String = "https://api.ssllabs.com/api/", apiVer
     }
   }
 
-  def analyse(domainName: String): Option[SslLabsReport] = {
-    interpretReportJson(Await.result(retrieveAnalysis(apiUrl, domainName), timeout.duration))
+  def analyse(domainName: String, currentTime: Long, lastTimePolled: Long, pollInterval: Long): Option[SslLabsReport] = {
+    (currentTime - lastTimePolled) >= pollInterval match {
+      case true => {
+        logger.info(s"Polling Qualsys report for ${domainName}")
+        interpretReportJson(Await.result(retrieveAnalysis(apiUrl, domainName), timeout.duration)) match {
+          case Some(report) => {
+            logger.info(s"Got ready report for ${domainName}")
+            Some(report)
+          }
+          case _ => {
+            logger.info(s"Report for ${domainName} not ready yet")
+            None
+          }
+        }
+      }
+      case false => {
+        logger.info(s"Not polling Qualsys report for ${domainName} at this time")
+        None
+      }
+    }
   }
 }
 

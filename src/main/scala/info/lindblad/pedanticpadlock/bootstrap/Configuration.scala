@@ -20,6 +20,8 @@ object Configuration {
 
   lazy val scheduledInterval: FiniteDuration = duration("scheduled-interval", TimeUnit.SECONDS)
 
+  lazy val sslLabsPollInterval: Long = values.getLong("ssl-labs.poll-interval")
+
   /**
    * Attempt to retrieve Redis connection details in the following order:
    *
