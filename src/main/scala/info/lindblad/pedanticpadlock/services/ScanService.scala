@@ -28,42 +28,29 @@ object ScanService extends ScanStateProcessing with Logging {
   }
 
   def startScan(notProcessed: NotProcessed, currentTime: Long): ScanState = {
-    val warningDaysBeforeExpiry = Try(Configuration.values.getInt("scan.warning-days-before-expiry")).getOrElse(30)
-    ConnectionProbeService.probe(notProcessed.domainName) match {
-      case ConnectionProbeResult(false, _) => {
-        logger.info("Java cannot connect to {}", notProcessed.domainName)
-        new FinishedResult(notProcessed.domainName, ScanReport(grade = Some("F"), reason = Some("Java cannot connect"), canConnect = false))
-      }
-      case ConnectionProbeResult(true, Some(daysUntilExpiration)) if (daysUntilExpiration <= warningDaysBeforeExpiry) => {
-        logger.info("Certificate for {} is expiring soon", notProcessed.domainName)
-        new FinishedResult(notProcessed.domainName, ScanReport(grade = Some(daysUntilExpiration.toString), reason = Some("Certificate about to expire soon"), canConnect = false))
-      }
-      case ConnectionProbeResult(true, Some(daysUntilExpiration)) if (daysUntilExpiration > warningDaysBeforeExpiry) => {
-        logger.info("Could connect to {} and certificate expiration is more than {} days away", notProcessed.domainName, warningDaysBeforeExpiry)
-        pollScan(new AwaitingResult(notProcessed.domainName, ScanReport(canConnect = true, daysUntilExpiration = Some(daysUntilExpiration))), currentTime)
-      }
-      case _ => {
-        notProcessed
+    def probe(domainName: String): ScanReport = {
+      ConnectionProbeService.probe(notProcessed.domainName) match {
+        case connectionProbeResult: ConnectionProbeResult => ScanReport(canConnect = connectionProbeResult.canConnect, daysUntilExpiration = connectionProbeResult.daysUntilExpiration)
       }
     }
+
+    val awaitingResult = new AwaitingResult(domainName = notProcessed.domainName, scanReport = probe(notProcessed.domainName))
+    pollScan(awaitingResult, currentTime)
   }
 
   def pollScan(awaitingResult: AwaitingResult, currentTime: Long): ScanState = {
-    SslLabsService().analyse(awaitingResult.domainName, currentTime, awaitingResult.lastTimePolled, Configuration.sslLabsPollInterval) match {
-      case None => new AwaitingResult(
-        domainName = awaitingResult.domainName,
-        scanReport = awaitingResult.scanReport,
-        timesPolled = awaitingResult.timesPolled + 1,
-        lastTimePolled = currentTime
-      )
-      case Some(report) => new FinishedResult(
-        awaitingResult.domainName,
-        scanReport = ScanReport(
-          canConnect = true,
-          grade = Some(report.grade),
-          reason = Some("Grade given by Qualys SSL Labs")
+    SslLabsService().analyse(awaitingResult, currentTime, awaitingResult.lastTimePolled, Configuration.sslLabsPollInterval) match {
+      case Right(sslLabsReport) => {
+        new FinishedResult(
+          awaitingResult.domainName,
+          scanReport = ScanReport(
+            canConnect = true,
+            grade = Some(sslLabsReport.grade),
+            reason = Some("Grade given by Qualys SSL Labs")
+          )
         )
-      )
+      }
+      case Left(newAwaitingResult) => newAwaitingResult
     }
   }
 

@@ -29,4 +29,12 @@ class SslLabsServiceSpec extends FlatSpec with Matchers {
     report.get.grade should be("A")
   }
 
+  it should "poll if a polling interval has passed" in {
+    SslLabsService().shouldPoll(1000, 900, 90) should be (true)
+  }
+
+  it should "not poll if a polling interval has not been passed" in {
+    SslLabsService().shouldPoll(1000, 900, 120) should be (false)
+  }
+
 }
