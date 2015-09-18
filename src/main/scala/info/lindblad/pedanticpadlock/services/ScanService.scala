@@ -8,26 +8,26 @@ import scala.util.Try
 
 abstract class ScanStateProcessing {
 
-  def process(currentState: ScanState, currentTime: Long, validDuration: Long, startScan: NotProcessed => ScanState = startScan, pollScan: AwaitingResult => ScanState = pollScan): ScanState
+  def process(currentState: ScanState, currentTime: Long, validDuration: Long, startScan: (NotProcessed, Long) => ScanState = startScan, pollScan: (AwaitingResult, Long) => ScanState = pollScan): ScanState
 
-  def startScan(notProcessed: NotProcessed): ScanState
+  def startScan(notProcessed: NotProcessed, currentTime: Long): ScanState
 
-  def pollScan(awaitingResult: AwaitingResult): ScanState
+  def pollScan(awaitingResult: AwaitingResult, currentTime: Long): ScanState
 
 }
 
 object ScanService extends ScanStateProcessing with Logging {
 
-  def process(currentState: ScanState, currentTime: Long, validDuration: Long, startScan: NotProcessed => ScanState = startScan, pollScan: AwaitingResult => ScanState = pollScan): ScanState = {
+  def process(currentState: ScanState, currentTime: Long, validDuration: Long, startScan: (NotProcessed, Long) => ScanState = startScan, pollScan: (AwaitingResult, Long) => ScanState = pollScan): ScanState = {
     currentState match {
-      case notProcessed: NotProcessed => startScan(notProcessed)
-      case awaitingResult: AwaitingResult => pollScan(awaitingResult)
-      case finishedResult: FinishedResult if ( finishedResult.isExpired(currentTime, validDuration) ) => startScan(new NotProcessed(finishedResult.domainName))
+      case notProcessed: NotProcessed => startScan(notProcessed, currentTime)
+      case awaitingResult: AwaitingResult => pollScan(awaitingResult, currentTime)
+      case finishedResult: FinishedResult if ( finishedResult.isExpired(currentTime, validDuration) ) => startScan(new NotProcessed(finishedResult.domainName), currentTime)
       case _ => currentState
     }
   }
 
-  def startScan(notProcessed: NotProcessed): ScanState = {
+  def startScan(notProcessed: NotProcessed, currentTime: Long): ScanState = {
     val warningDaysBeforeExpiry = Try(Configuration.values.getInt("scan.warning-days-before-expiry")).getOrElse(30)
     ConnectionProbeService.probe(notProcessed.domainName) match {
       case ConnectionProbeResult(false, _) => {
@@ -40,7 +40,7 @@ object ScanService extends ScanStateProcessing with Logging {
       }
       case ConnectionProbeResult(true, Some(daysUntilExpiration)) if (daysUntilExpiration > warningDaysBeforeExpiry) => {
         logger.info("Could connect to {} and certificate expiration is more than {} days away", notProcessed.domainName, warningDaysBeforeExpiry)
-        pollScan(new AwaitingResult(notProcessed.domainName, ScanReport(canConnect = true, daysUntilExpiration = Some(daysUntilExpiration))))
+        pollScan(new AwaitingResult(notProcessed.domainName, ScanReport(canConnect = true, daysUntilExpiration = Some(daysUntilExpiration))), currentTime)
       }
       case _ => {
         notProcessed
@@ -48,14 +48,13 @@ object ScanService extends ScanStateProcessing with Logging {
     }
   }
 
-  def pollScan(awaitingResult: AwaitingResult): ScanState = {
-    logger.info(s"Polling Qualsys report for ${awaitingResult.domainName}")
-    logger.info(s"${awaitingResult.timesPolled} times polled previously")
-    SslLabsService().analyse(awaitingResult.domainName) match {
+  def pollScan(awaitingResult: AwaitingResult, currentTime: Long): ScanState = {
+    SslLabsService().analyse(awaitingResult.domainName, currentTime, awaitingResult.lastTimePolled, Configuration.sslLabsPollInterval) match {
       case None => new AwaitingResult(
         domainName = awaitingResult.domainName,
         scanReport = awaitingResult.scanReport,
-        awaitingResult.timesPolled + 1
+        timesPolled = awaitingResult.timesPolled + 1,
+        lastTimePolled = currentTime
       )
       case Some(report) => new FinishedResult(
         awaitingResult.domainName,

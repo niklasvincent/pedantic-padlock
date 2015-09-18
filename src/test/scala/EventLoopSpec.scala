@@ -8,13 +8,13 @@ class EventLoopSpec extends FlatSpec with Matchers {
 
   object TestScanStateProcessor extends ScanStateProcessing {
 
-    def process(currentState: ScanState, currentTime: Long, validDuration: Long, startScan: NotProcessed => ScanState = startScan, pollScan: AwaitingResult => ScanState = pollScan): ScanState = {
+    def process(currentState: ScanState, currentTime: Long, validDuration: Long, startScan: (NotProcessed, Long) => ScanState = startScan, pollScan: (AwaitingResult, Long) => ScanState = pollScan): ScanState = {
       ScanService.process(currentState, currentTime, validDuration, TestScanStateProcessor.startScan, TestScanStateProcessor.pollScan)
     }
 
-    def startScan(notProcessed: NotProcessed): ScanState = new AwaitingResult(notProcessed.domainName, ScanReport(canConnect = true))
+    def startScan(notProcessed: NotProcessed, currentTime: Long): ScanState = new AwaitingResult(notProcessed.domainName, ScanReport(canConnect = true))
 
-    def pollScan(awaitingResult: AwaitingResult): FinishedResult = new FinishedResult(awaitingResult.domainName, ScanReport(canConnect = true))
+    def pollScan(awaitingResult: AwaitingResult, currentTime: Long): FinishedResult = new FinishedResult(awaitingResult.domainName, ScanReport(canConnect = true))
 
   }
 

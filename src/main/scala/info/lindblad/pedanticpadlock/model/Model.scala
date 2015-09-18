@@ -7,7 +7,7 @@ trait ScanState {
 
 class NotProcessed(val domainName: String, val timeCreated: Long = System.currentTimeMillis()) extends ScanState
 
-class AwaitingResult(val domainName: String, val scanReport: ScanReport, val timesPolled: Int = 0, val timeCreated: Long = System.currentTimeMillis()) extends ScanState
+class AwaitingResult(val domainName: String, val scanReport: ScanReport, val timesPolled: Int = 0, val lastTimePolled: Long = 0, val timeCreated: Long = System.currentTimeMillis()) extends ScanState
 
 class FinishedResult(val domainName: String, val scanReport: ScanReport, val timeCreated: Long = System.currentTimeMillis()) extends ScanState {
 
