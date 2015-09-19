@@ -2,7 +2,7 @@ package info.lindblad.pedanticpadlock.services
 
 import akka.actor.ActorSystem
 import akka.util.Timeout
-import info.lindblad.pedanticpadlock.model.SslLabsReport
+import info.lindblad.pedanticpadlock.model.{AwaitingResult, SslLabsReport}
 import info.lindblad.pedanticpadlock.util.Logging
 import org.json4s.JsonAST.{JArray, JString}
 import org.json4s.native.JsonMethods._
@@ -15,7 +15,7 @@ import scala.concurrent.{Await, Future}
 
 trait SslLabsApi {
   def interpretReportJson(analysis: JValue): Option[SslLabsReport]
-  def analyse(domainName: String, currentTime: Long, lastTimePolled: Long, pollInterval: Long): Option[SslLabsReport]
+  def analyse(awaitingResult: AwaitingResult, currentTime: Long, lastTimePolled: Long, pollInterval: Long): Either[AwaitingResult, SslLabsReport]
 }
 
 trait SslLabsApiClient {
@@ -61,24 +61,25 @@ class SslLabsService(apiBaseUrl: String = "https://api.ssllabs.com/api/", apiVer
     }
   }
 
-  def analyse(domainName: String, currentTime: Long, lastTimePolled: Long, pollInterval: Long): Option[SslLabsReport] = {
-    (currentTime - lastTimePolled) >= pollInterval match {
+  def shouldPoll(currentTime: Long, lastTimePolled: Long, pollInterval: Long): Boolean = (currentTime - lastTimePolled) >= pollInterval
+
+  def analyse(awaitingResult: AwaitingResult, currentTime: Long, lastTimePolled: Long, pollInterval: Long): Either[AwaitingResult, SslLabsReport] = {
+    shouldPoll(currentTime, lastTimePolled, pollInterval) match {
       case true => {
-        logger.info(s"Polling Qualsys report for ${domainName}")
-        interpretReportJson(Await.result(retrieveAnalysis(apiUrl, domainName), timeout.duration)) match {
+        logger.info(s"Polling Qualsys report for ${awaitingResult.domainName}")
+        interpretReportJson(Await.result(retrieveAnalysis(apiUrl, awaitingResult.domainName), timeout.duration)) match {
           case Some(report) => {
-            logger.info(s"Got ready report for ${domainName}")
-            Some(report)
+            logger.info(s"Got ready report for ${awaitingResult.domainName}")
+            Right(report)
           }
           case _ => {
-            logger.info(s"Report for ${domainName} not ready yet")
-            None
+            logger.info(s"Report for ${awaitingResult.domainName} not ready yet")
+            Left(new AwaitingResult(domainName = awaitingResult.domainName, scanReport = awaitingResult.scanReport, lastTimePolled = currentTime, timesPolled = awaitingResult.timesPolled + 1))
           }
         }
       }
       case false => {
-        logger.info(s"Not polling Qualsys report for ${domainName} at this time")
-        None
+        Left(awaitingResult)
       }
     }
   }
